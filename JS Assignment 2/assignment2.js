@@ -14,7 +14,7 @@ function printMotto(motto, count) {
 
         for (var i=1; i<=count; i++){
          document.write(motto,count);
-           console.log(motto, count);
+           console.log(motto, i);
               }
             
         
