@@ -78,9 +78,10 @@
         // This function will take the numbers the user put in for the range of the game. It will use Math.random to produce a whole,random number within that range. This reference may be helpful.
         //return Math.floor(Math.random() * (10 - 1) + min);
             function randomNumber(min, max) { 
-return Math.round(Math.random() * (max - min) + min);
+return Math.round(Math.random() * (min - max) + min);
 	}
-   
+   //
+   numberGuessGame(1,10);
 
 
       
