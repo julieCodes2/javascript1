@@ -20,7 +20,7 @@
     updateDOM ('low number must be smaller than high number', 'red');
     return
  }
- numberGuessGame(min,max);
+ //numberGuessGame(min,max);
  }
 //------------------//
         // This function will display the error message if there is a validation error. And later it will also display "CONGRATULATIONS!!! __ is correct!". The value parameter will either be the error message string, or the congratulations message. The color you can use to make the error red, or the congrats message a special color.
@@ -33,6 +33,8 @@
     div.style.color = color;
     div.innerHTML=value;
  }
+ 
+ 
 //-----------------------//
          // This function will include the loop and the logic to drive the game. Use a do while loop with a condition similar to while(userGuess != actualNumber). Inside the loop, use prompt() to prompt the user for their next guess, and display their progress letting them know if they need to guess higher or lower in the prompts. This function will take a fair bit of thought. Perhaps this code structure may be helpful as you write this code:
         //let num = randomNumber(min, max)
@@ -55,7 +57,9 @@
     do {
         const value = prompt(message);
         if (value===null) {
+          
             updateDOM('Game was cancelled!', 'blue');
+            
             return
         }
         guess = parseInt(value);
@@ -70,7 +74,9 @@
     }
             }while (guess !== secretNumber);
             
-            updateDOM('CONGRATULATIONS!!! ' + secretNumber + ' is correct', 'green');
+            //updateDOM('CONGRATULATIONS!!! ' + secretNumber + ' is correct', 'green');
+            document.write('CONGRATULATIONS!!! ' + secretNumber + ' is correct');
+                        // document.write('CONGRATULATIONS!!! ' + secretNumber + ' is correct', 'green');
         }
     
 //---------------//
@@ -78,13 +84,11 @@
         // This function will take the numbers the user put in for the range of the game. It will use Math.random to produce a whole,random number within that range. This reference may be helpful.
         //return Math.floor(Math.random() * (10 - 1) + min);
             function randomNumber(min, max) { 
-return Math.round(Math.random() * (min - max) + min);
+//return Math.round(Math.random() * (min - max) + min);
+return Math.floor(Math.random() * (5 - 1) + min);
 	}
    //
-   numberGuessGame(1,10);
-
-
-      
-        
+   numberGuessGame(1,5);
+   
 
 
