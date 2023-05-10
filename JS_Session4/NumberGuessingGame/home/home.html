@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guessing Game</title>
-    <script src="home.js"></script>
+   
    <link rel="stylesheet" href="home.css">
 </head>
 <body>
  <h1>Number Guessing Game</h1>
     <p>Please enter a low number and a high number for our guessing game range (from: 5 to 10)</p>
-    <form id="guessForm" onsubmit="submitData(); return false">
+    <!-- <form id="guessForm" onsubmit="submitData(); return false">
     <input type="number" placeholder= "Enter a low number" id="min">;
     <input type="number" placeholder= "Enter a high number" id="max">;
     <button type="submit">Play Game!</button> 
-    <!-- break -->
+    break -->
+</form> 
+<form name="gameform" onsubmit="return submitData();">
+  <label for="min">Min</label>
+  <input type="text" name="min" id="min" /><br /><br />
+  <label for="max">Max</label>
+  <input type="text" name="max" id="max" /><br /><br />
+  <button type="submit">Play</button>
 </form>
+<div id="output"></div>
 
 
-  <div id="historyArea">
+  <!-- <div id="historyArea">
 				<h2>Your Previous Guesses</h2>
 				<ol id="historyList">
 				</ol>
 			</div>
       <br>
       <br>
-      <div id="output">Status Area</div>
+      <div id="output">Status Area</div> -->
+       <script src="home.js"></script>
 </body>
 </html>
