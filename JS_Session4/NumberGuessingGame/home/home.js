@@ -59,7 +59,7 @@ return false;
             message= "Guess is too high. try again!";
             guess = parseInt(prompt(message));
         }
-         if (isNan(guess)) {
+         if (isNaN(guess)) {
            break;
         }
         } while(guess !== num);
@@ -69,6 +69,4 @@ return false;
     function randomNumber(min, max) { 
         return Math.random() * (max - min) + min;
     } 
-    
-
     
